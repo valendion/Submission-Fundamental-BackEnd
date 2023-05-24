@@ -22,7 +22,7 @@ class PlaylistsService {
     if (!result.rowCount) {
       throw new InvariantError('Playlist gagal ditambahkan');
     }
-    return result.rows[0].id;
+    return { playlistId: result.rows[0].id };
   }
 
   async getPlaylists(owner) {
