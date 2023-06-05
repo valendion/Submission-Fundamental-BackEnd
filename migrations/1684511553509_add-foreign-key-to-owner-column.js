@@ -1,7 +1,5 @@
 /* eslint-disable camelcase */
 
-exports.shorthands = undefined;
-
 exports.up = (pgm) => {
   // memberikan constraint foreign key pada owner terhadap kolom id dari tabel users
   pgm.addConstraint(
