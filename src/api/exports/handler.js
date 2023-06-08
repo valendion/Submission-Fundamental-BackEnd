@@ -18,10 +18,10 @@ class ExportsHandler {
     await this._playlistsService.getPlaylistsById(id);
 
     const message = {
-      id,
+      userId: id,
       targetEmail: request.payload.targetEmail,
     };
-
+    console.log(message);
     await this._producerService.sendMessage(
       'export:playlists',
       JSON.stringify(message)

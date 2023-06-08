@@ -66,7 +66,7 @@ class AlbumsService {
     const updateAt = new Date().toISOString();
 
     const query = {
-      text: 'UPDATE albums SET name = $1, year = $2,update_at = $3, cover=$4 WHERE id = $4 RETURNING id',
+      text: 'UPDATE albums SET name = $1, year = $2,update_at = $3, cover=$4 WHERE id = $5 RETURNING id',
       values: [name, year, updateAt, cover, id],
     };
     const result = await this._pool.query(query);
